@@ -30,7 +30,7 @@ public class RoomsController {
 		return "room/listRooms";
 	}
 	
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(path = "{date}", method = RequestMethod.GET)
 	String listRooms(
 			@DateTimeFormat(iso = DateTimeFormat.ISO.DATE) @ PathVariable("date")
 			LocalDate date,
